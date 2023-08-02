@@ -4,7 +4,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
   return (
     <section className="w-full max-w-full flex-start flex-col">
       <h1 className="head_text text-left">
-        <span className="blue_gradient">{type} Post</span>
+        <span className="purple_gradient">{type} Post</span>
       </h1>
       <p className="desc text-left max-w-md">
         {type} and share amazing prompts with the world, and let your imagination run wild with any AI-powered platform.
@@ -16,7 +16,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
       >
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
-            Your AI Prompt
+            Your AI Prompt, Tool
           </span>
           <textarea
             value={post.prompt}
@@ -48,7 +48,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           <button
             type="submit"
             disabled={submitting}
-            className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white"
+            className="px-5 py-1.5 text-sm bg-purple-800 rounded-full text-white"
           >
             {submitting ? `${type}ing...` : type}
           </button>

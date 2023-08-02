@@ -4,8 +4,8 @@ import Nav from '@components/Nav';
 import Provider from '@components/Provider';
 
 export const metadata = {
-    title: "ShareAIprompts",
-    description: "Discover & Share AI Prompts",
+    title: "AI Helpers",
+    description: "Discover & Share AI prompts, tools, etc.",
 }
 
 const RootLayout = ({children}) => {

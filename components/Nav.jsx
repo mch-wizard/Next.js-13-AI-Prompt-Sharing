@@ -31,7 +31,7 @@ const Nav = () => {
           height={30}
           className="object-contain"
         />
-        <p className="logo_text">ShareAIprompts</p>
+        <p className="logo_text">AI Helpers</p>
       </Link>
 
       {/* {alert(providers)} */}

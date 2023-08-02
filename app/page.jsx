@@ -6,10 +6,10 @@ const Home = () => {
       <h1 className="head_text text-center">
         Discover & Share
         <br className="mex-md:hidden" />
-        <span className="orange_gradient text-center"> AI-Powered Prompts</span>
+        <span className="purple_gradient text-center"> AI-Powered Prompts & Tools</span>
       </h1>
-      <p className="desc text-center">
-        ShareAIprompts is an open-source AI prompting tool for modern world to discover, create and share creative prompts.
+      <p className="desc text-center pt-5">
+      AI Helpers is an open source platform that focuses on collecting AI tools and prompts. The goal is to develop an environment that will test things related to AI and share knowledge.
       </p>
 
       <Feed />
