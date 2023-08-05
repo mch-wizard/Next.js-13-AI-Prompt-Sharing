@@ -4,7 +4,7 @@ import Nav from '@components/Nav';
 import Provider from '@components/Provider';
 
 export const metadata = {
-    title: "AI Helpers",
+    title: "AI Helpers - Prompts & Tools",
     description: "Discover & Share AI prompts, tools, etc.",
 }
 

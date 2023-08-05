@@ -13,6 +13,7 @@ const UpdatePrompt = () => {
   const [submitting, setIsSubmitting] = useState(false);
   const [post, setPost] = useState({
     prompt: "",
+    category: "",
     tag: "",
   });
 
@@ -22,8 +23,9 @@ const UpdatePrompt = () => {
           const data = await response.json();
           
           setPost({
-              prompt: data.prompt,
-              tag: data.tag,
+            prompt: data.prompt,
+            category: data.category,
+            tag: data.tag,
           });
       };
       
@@ -41,6 +43,7 @@ const UpdatePrompt = () => {
         method: "PATCH",
         body: JSON.stringify({
           prompt: post.prompt,
+          category: post.category,
           tag: post.tag,
         }),
       });

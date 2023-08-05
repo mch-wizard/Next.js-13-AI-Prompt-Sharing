@@ -9,6 +9,10 @@ const PromptSchema = new Schema({
         type: String,
         required: [true, 'Prompt is required.'],
     },
+    category: {
+        type: String,
+        required: [true, 'Category is required.']
+    },
     tag: {
         type: String,
         required: [true, 'Tag is required'],

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
 
-const PromptCardList = ({ data, handleTagClick }) => {
+const PromptCardList = ({ data, handleTagClick, handleCategoryClick }) => {
   return (
     <div className="mt-16 prompt_layout">
       {data.map((post) => (
@@ -12,6 +12,7 @@ const PromptCardList = ({ data, handleTagClick }) => {
           key={post._id}
           post={post}
           handleTagClick={handleTagClick}
+          handleCategoryClick={handleCategoryClick}
         />
       ))}
     </div>
@@ -42,6 +43,7 @@ const Feed = () => {
     return posts.filter((item) =>
       regex.test(item.creator.username) ||
       regex.test(item.tag) ||
+      regex.test(item.category) ||
       regex.test(item.prompt)
     );
   };
@@ -66,6 +68,13 @@ const Feed = () => {
     setSearchedResoults(searchResult);
   };
 
+  const handleCategoryClick = (categoryName) => {
+    setSearchText(categoryName);
+
+    const searchResult = filterPrompts(categoryName);
+    setSearchedResoults(searchResult);
+  };
+
 
   return (
     <section className="feed">
@@ -84,11 +93,13 @@ const Feed = () => {
         <PromptCardList
           data={searchedResults}
           handleTagClick={handleTagClick}
+          handleCategoryClick={handleCategoryClick}
         />
       ) : (
           <PromptCardList
             data={posts}
             handleTagClick={handleTagClick}
+            handleCategoryClick={handleCategoryClick}
           />
       )}
       
