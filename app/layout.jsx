@@ -5,8 +5,11 @@ import Provider from '@components/Provider';
 import Footer from '@components/Footer';
 
 export const metadata = {
-    title: "AI Helpers - Prompts & Tools",
-    description: "Discover & Share AI prompts, tools, etc.",
+  title: "AI Helpers - Prompts & Tools",
+  description: "Discover & Share AI prompts, tools, etc.",
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 const RootLayout = ({children}) => {
